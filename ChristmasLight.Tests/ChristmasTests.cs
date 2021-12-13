@@ -21,7 +21,8 @@ namespace ChristmasLight.Tests
             bulb.TurnOn();
             bulb.Status().Should().Be(1);
         }
-
+        
+        [Fact]
         public void BulbIsOffThenOnThenOff()
         {
             Bulb bulb = new Bulb();
