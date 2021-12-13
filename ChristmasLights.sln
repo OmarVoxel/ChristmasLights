@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasLight.Tests", "ChristmasLight.Tests\ChristmasLight.Tests.csproj", "{A14BB73A-79A5-49A4-A5A5-00A8FDEC9FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasLights", "ChristmasLights\ChristmasLights.csproj", "{4234A08C-31E8-4FF8-8D2E-6283832BB3D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasLight", "ChristmasLight\ChristmasLight.csproj", "{2D519994-6D61-4C36-A818-95DF1E760F93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{A14BB73A-79A5-49A4-A5A5-00A8FDEC9FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A14BB73A-79A5-49A4-A5A5-00A8FDEC9FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A14BB73A-79A5-49A4-A5A5-00A8FDEC9FCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4234A08C-31E8-4FF8-8D2E-6283832BB3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4234A08C-31E8-4FF8-8D2E-6283832BB3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4234A08C-31E8-4FF8-8D2E-6283832BB3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4234A08C-31E8-4FF8-8D2E-6283832BB3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D519994-6D61-4C36-A818-95DF1E760F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D519994-6D61-4C36-A818-95DF1E760F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D519994-6D61-4C36-A818-95DF1E760F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D519994-6D61-4C36-A818-95DF1E760F93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
