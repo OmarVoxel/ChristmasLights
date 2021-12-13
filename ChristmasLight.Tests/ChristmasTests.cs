@@ -13,5 +13,13 @@ namespace ChristmasLight.Tests
             Bulb bulb = new Bulb();
             bulb.Status().Should().Be(0);
         }
+
+        [Fact]
+        public void BulbIsOn()
+        {
+            Bulb bulb = new Bulb();
+            bulb.TurnOn();
+            bulb.Status().Should().Be(1);
+        }
     }
 }
