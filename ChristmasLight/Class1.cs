@@ -4,10 +4,9 @@ namespace ChristmasLight
 {
     public class Bulb
     {
-        public int Status()
-            => 0;
+        private int _bulb;
         
+        public int Status() => _bulb;
+        public void TurnOn() => _bulb = 1;
     }
-    
-    
 }
