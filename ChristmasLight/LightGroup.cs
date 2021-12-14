@@ -1,6 +1,6 @@
 ﻿namespace ChristmasLight
 {
-    public struct Matrix
+    public class Matrix
     {
         private readonly Bulb[,] _matrix;
 
