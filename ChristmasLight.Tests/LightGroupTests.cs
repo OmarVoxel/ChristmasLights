@@ -22,12 +22,14 @@ namespace ChristmasLight.Tests
         {
             LightGroup lightGroup = new LightGroup();
 
-            lightGroup.Instruction(499, 499, 500, 500);
+            lightGroup.Instruction(
+                new Coordinate(499, 499),
+                new Coordinate(500, 500));
 
-            lightGroup.At(499, 499).Should().Be(1);
-            lightGroup.At(499, 500).Should().Be(1);
-            lightGroup.At(500, 499).Should().Be(1);
-            lightGroup.At(500, 500).Should().Be(1);
+            lightGroup.At(499, 499).Status().Should().Be(1);
+            lightGroup.At(499, 500).Status().Should().Be(1);
+            lightGroup.At(500, 499).Status().Should().Be(1);
+            lightGroup.At(500, 500).Status().Should().Be(1);
         }
     }
 }

@@ -21,6 +21,15 @@
         
         public Bulb At(int x, int y)  => _matrix[x, y];
     }
+
+    public struct Coordinate
+    {
+        public int X;
+        public int Y;
+
+        public Coordinate(int x, int y)
+            => (X, Y) = (x, y);
+    }
     
     public class LightGroup
     {
@@ -31,5 +40,12 @@
         
         public Bulb At(int x, int y)
             => _matrix.At(x, y);
+
+        public void Instruction(Coordinate cordA, Coordinate cordB)
+        {
+           for(int x = cordA.X; x <= cordB.X; x++)
+               for(int y = cordA.Y; y <= cordB.Y; y++)
+                   _matrix.At(x, y).TurnOn();
+        }
     }
 }
