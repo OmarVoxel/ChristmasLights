@@ -31,7 +31,6 @@
             => (X, Y) = (x, y);
     }
     
-    
     public class LightGroup
     {
         private Matrix _matrix;
