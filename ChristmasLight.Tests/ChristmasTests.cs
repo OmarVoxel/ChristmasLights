@@ -7,6 +7,8 @@ namespace ChristmasLight.Tests
 {
     public class ChristmasTests
     {
+        private readonly LightGroupTests _lightGroupTests = new LightGroupTests();
+
         [Fact]
         public void BulbIsOff()
         {
@@ -32,17 +34,5 @@ namespace ChristmasLight.Tests
             bulb.TurnOff();
             bulb.Status().Should().Be(0);
         }
-
-        [Theory]
-        [InlineData(0, 0)]
-        [InlineData(999, 0)]
-        [InlineData(0, 999)]
-        [InlineData(999, 999)]
-        public void BulbsAtPositionsAreOffByDefault(int x, int y)
-        {
-            LightGroup lightGroup = new LightGroup();
-            lightGroup.At(x, y).Status().Should().Be(0);
-        }
-        
     }
 }
