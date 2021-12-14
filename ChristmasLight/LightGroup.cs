@@ -1,22 +1,35 @@
 ﻿namespace ChristmasLight
 {
-    public class LightGroup
+    public struct Matrix
     {
-        private const int M = 1000;
-        private const int N = 1000;
+        private readonly Bulb[,] _matrix;
 
-        private Bulb[,] _matrix = new Bulb[N,M];
-
-        public LightGroup()
-            => Initialize();
-
-        private void Initialize()
+        public Matrix(int n, int m)
         {
-            for (int x = 0; x < M; x++)
-                for (int y = 0; y < N; y++)
-                    _matrix[x, y] = new Bulb();
+            _matrix = new Bulb[n, m];
+            _matrix = BuildMatrix(n, m);
         }
 
-        public Bulb At(int x, int y) => _matrix[x, y];
+        private Bulb[,] BuildMatrix(int n, int m)
+        {
+            for (int x = 0; x < n; x++)
+                for (int y = 0; y < m; y++)
+                    _matrix[x, y] = new Bulb();
+
+            return _matrix;
+        }
+        
+        public Bulb At(int x, int y)  => _matrix[x, y];
+    }
+    
+    public class LightGroup
+    {
+        private Matrix _matrix;
+
+        public LightGroup()
+            => _matrix = new(1000,1000);
+        
+        public Bulb At(int x, int y)
+            => _matrix.At(x, y);
     }
 }
