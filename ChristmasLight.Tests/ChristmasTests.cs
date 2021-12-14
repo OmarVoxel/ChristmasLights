@@ -7,7 +7,6 @@ namespace ChristmasLight.Tests
 {
     public class ChristmasTests
     {
-        private readonly LightGroupTests _lightGroupTests = new LightGroupTests();
 
         [Fact]
         public void BulbIsOff()
