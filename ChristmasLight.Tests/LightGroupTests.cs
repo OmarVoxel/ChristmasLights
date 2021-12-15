@@ -77,6 +77,59 @@ namespace ChristmasLight.Tests
             
             lightGroup.CountBulbOn().Should().Be(0);
         }
-        
+
+
+        [Fact]
+        public void InstructionsRequestedSequences()
+        {
+            LightGroup lightGroup = new LightGroup();
+            
+            lightGroup.Instruction(
+                new Coordinate(887, 9),
+                new Coordinate(959, 629),
+                Instructions.TurnOn);
+
+            lightGroup.Instruction(
+                new Coordinate(454, 398),
+                new Coordinate(844, 448),
+                Instructions.TurnOn);
+            
+            lightGroup.Instruction(
+                new Coordinate(539, 243),
+                new Coordinate(559, 965),
+                Instructions.TurnOff);
+            
+            lightGroup.Instruction(
+                new Coordinate(370, 819),
+                new Coordinate(676, 868),
+                Instructions.TurnOff);
+            
+            lightGroup.Instruction(
+                new Coordinate(145, 40),
+                new Coordinate(370, 997),
+                Instructions.TurnOff);
+
+            lightGroup.Instruction(
+                new Coordinate(301, 3),
+                new Coordinate(808, 453),
+                Instructions.TurnOff);
+            
+            lightGroup.Instruction(
+                new Coordinate(351, 678),
+                new Coordinate(951, 908),
+                Instructions.TurnOn);
+            
+            lightGroup.Instruction(
+                new Coordinate(720, 196),
+                new Coordinate(897, 994),
+                Instructions.Toggle);
+            
+            lightGroup.Instruction(
+                new Coordinate(831, 394),
+                new Coordinate(904, 860),
+                Instructions.Toggle);
+            
+            lightGroup.CountBulbOn().Should().Be(230022);
+        }
     }
 }
