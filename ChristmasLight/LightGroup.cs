@@ -42,11 +42,27 @@
         public Bulb At(int x, int y)
             => _matrix.At(x, y);
 
-        public void Instruction(Coordinate cordA, Coordinate cordB)
+        public void Instruction
+            (Coordinate cordA, Coordinate cordB, Instructions instructions)
         {
-           for(int x = cordA.X; x <= cordB.X; x++)
-               for(int y = cordA.Y; y <= cordB.Y; y++)
-                   _matrix.At(x, y).TurnOn();
+            for (int x = cordA.X; x <= cordB.X; x++)
+            {
+                for (int y = cordA.Y; y <= cordB.Y; y++)
+                {
+                    switch (instructions)
+                    {
+                        case Instructions.Toggle:
+                            _matrix.At(x, y).Toggle();
+                            break;
+                        case Instructions.TurnOff:
+                            _matrix.At(x, y).TurnOff();
+                            break;
+                        case Instructions.TurnOn:
+                            _matrix.At(x, y).TurnOn();
+                            break;
+                    }
+                }
+            }
         }
 
         public int CountBulbOn()

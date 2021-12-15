@@ -24,7 +24,8 @@ namespace ChristmasLight.Tests
 
             lightGroup.Instruction(
                 new Coordinate(499, 499),
-                new Coordinate(500, 500));
+                new Coordinate(500, 500),
+                Instructions.TurnOn);
 
             lightGroup.At(499, 499).Status().Should().Be(1);
             lightGroup.At(499, 500).Status().Should().Be(1);
@@ -39,7 +40,8 @@ namespace ChristmasLight.Tests
 
             lightGroup.Instruction(
                 new Coordinate(0, 0),
-                new Coordinate(999, 999));
+                new Coordinate(999, 999),
+                Instructions.TurnOn);
 
             lightGroup.CountBulbOn().Should().Be(1000000);
         }
@@ -51,7 +53,8 @@ namespace ChristmasLight.Tests
 
             lightGroup.Instruction(
                 new Coordinate(499, 499),
-                new Coordinate(500, 500));
+                new Coordinate(500, 500),
+                Instructions.TurnOn);
 
             lightGroup.CountBulbOn().Should().Be(4);
         }
@@ -64,11 +67,13 @@ namespace ChristmasLight.Tests
 
             lightGroup.Instruction(
                 new Coordinate(499, 499),
-                new Coordinate(500, 500));
+                new Coordinate(500, 500),
+                Instructions.Toggle);
     
             lightGroup.Instruction(
                 new Coordinate(499, 499),
-                new Coordinate(500, 500));
+                new Coordinate(500, 500),
+                Instructions.Toggle);
             
             lightGroup.CountBulbOn().Should().Be(0);
         }
