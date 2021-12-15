@@ -49,9 +49,13 @@
                    _matrix.At(x, y).TurnOn();
         }
 
-        public void CountBulbOn()
+        public int CountBulbOn()
         {
-            throw new System.NotImplementedException();
+            int count = 0;
+            for(int x = 0; x <= 999; x++)
+                for (int y = 0; y <= 999; y++)
+                    count++;
+            return count;
         }
     }
 }
