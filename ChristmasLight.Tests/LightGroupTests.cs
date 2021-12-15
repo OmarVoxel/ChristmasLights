@@ -31,5 +31,17 @@ namespace ChristmasLight.Tests
             lightGroup.At(500, 499).Status().Should().Be(1);
             lightGroup.At(500, 500).Status().Should().Be(1);
         }
+        
+        [Fact]
+        public void OneMillionBulbsAreOn()
+        {
+            LightGroup lightGroup = new LightGroup();
+
+            lightGroup.Instruction(
+                new Coordinate(0, 0),
+                new Coordinate(999, 999));
+
+            lightGroup.CountBulbOn().Should().Be(1000000);
+        }
     }
 }

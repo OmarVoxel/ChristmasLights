@@ -48,5 +48,10 @@
                for(int y = cordA.Y; y <= cordB.Y; y++)
                    _matrix.At(x, y).TurnOn();
         }
+
+        public void CountBulbOn()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
