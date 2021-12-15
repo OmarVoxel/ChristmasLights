@@ -43,5 +43,17 @@ namespace ChristmasLight.Tests
 
             lightGroup.CountBulbOn().Should().Be(1000000);
         }
+        
+        [Fact]
+        public void FourBulbsAreOn()
+        {
+            LightGroup lightGroup = new LightGroup();
+
+            lightGroup.Instruction(
+                new Coordinate(499, 499),
+                new Coordinate(500, 500));
+
+            lightGroup.CountBulbOn().Should().Be(4);
+        }
     }
 }

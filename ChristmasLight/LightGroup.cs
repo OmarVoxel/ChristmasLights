@@ -54,7 +54,9 @@
             int count = 0;
             for(int x = 0; x <= 999; x++)
                 for (int y = 0; y <= 999; y++)
-                    count++;
+                    if (_matrix.At(x, y).Status() == 1) 
+                        count++;
+                    
             return count;
         }
     }
